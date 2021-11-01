@@ -1,0 +1,38 @@
+<div class="electronTitlebarContainer">
+  <!-- 负责缩放 -->
+  <div class="resize"></div>
+  <!-- 内容 -->
+  <div class="contentBox">
+    <!-- 接收自定义内容 -->
+    <div class="customContent">
+      <ng-content></ng-content>
+    </div>
+    <!-- 图标盒子 -->
+    <div class="iconBoxOuter">
+      <div class="iconBox">
+        <!-- 窗口最小化 -->
+        <div class="minus" title="最小化" (click)="windowMinimize()">
+          <img class="minusImg" [src]="icons['minus']" />
+        </div>
+        <!-- 窗口最小化 -->
+        <div id="minimize">
+          <div class="minimize" title="向下还原" (click)="windowUnmaximize()">
+            <img class="minimizeImg" [src]="icons['minimize']" />
+          </div>
+        </div>
+        <!-- 窗口最大化 -->
+        <div id="maximize">
+          <div class="maximize" title="向上还原" (click)="windowMaximize()">
+            <img class="maximizeImg" [src]="icons['maximize']" />
+          </div>
+        </div>
+        <!-- 关闭窗口 -->
+        <div class="multiply" title="关闭" (click)="windowClose()">
+          <i class="multiplyFont">╳</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 负责缩放 -->
+  <div class="resize"></div>
+</div>

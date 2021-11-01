@@ -1,0 +1,95 @@
+.electronTitlebarContainer {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(222, 225, 230, 1);
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .resize {
+    width: 3px;
+    height: 100%;
+  }
+
+  .contentBox {
+    width: 100%;
+    // 设置margin-top扩大鼠标侧边悬浮是的感应区域
+    margin-top: 3px;
+    height: fit-content;
+    -webkit-app-region: drag;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .customContent {
+      width: calc(100% - 120px);
+      height: 24px;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      font-size: 14px;
+    }
+
+    .iconBoxOuter {
+      width: 120px;
+      position: relative;
+      height: 27px;
+      top: -3px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: auto;
+      padding: 0 2px;
+
+      .iconBox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+          height: 30px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          -webkit-app-region: no-drag;
+
+          .minusImg {
+            width: 11px;
+          }
+
+          .minimizeImg {
+            width: 13px;
+          }
+
+          .maximizeImg {
+            width: 11px;
+          }
+
+          .multiplyFont {
+            font-size: 18px;
+            font-style: normal;
+          }
+
+          &:hover {
+            background-color: #c7cacf;
+            opacity: 1;
+          }
+        }
+
+        .multiply:hover {
+          background-color: rgba(232, 17, 35, 1);
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
