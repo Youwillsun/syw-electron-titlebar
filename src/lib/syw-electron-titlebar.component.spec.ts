@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SywElectronTitlebarComponent } from './syw-electron-titlebar.component';
 
-describe('ElectronTitlebarComponent', () => {
+describe('sywElectronTitlebarComponent', () => {
   let component: SywElectronTitlebarComponent;
   let fixture: ComponentFixture<SywElectronTitlebarComponent>;
 

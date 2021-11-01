@@ -2,7 +2,11 @@
   "name": "syw-electron-titlebar",
   "version": "2.0.0",
   "description": "This is a angualrcli based custom electron titlebar.",
-  "keywords": ["Angular", "Electron", "Titlebar"],
+  "keywords": [
+    "Angular",
+    "Electron",
+    "Titlebar"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/YouWillSun/syw-electron-titlebar"

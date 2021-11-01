@@ -8,7 +8,7 @@ interface ICONS {
 }
 
 @Component({
-  selector: 'electronTitlebar',
+  selector: 'sywElectronTitlebar',
   templateUrl: './syw-electron-titlebar.component.html',
   styleUrls: ['./syw-electron-titlebar.component.scss']
 })

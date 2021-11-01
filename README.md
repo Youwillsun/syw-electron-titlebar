@@ -1,4 +1,4 @@
-# ElectronTitlebar
+# SywElectronTitlebar
 
 - Angular CLI v12.2.0
 - Electron v13.1.7
@@ -44,36 +44,36 @@ npm i syw-electron-titlebar
 
    ```html
    <!-- 类似组件使用方式 -->
-   <electronTitlebar></electronTitlebar>
+   <sywElectronTitlebar></sywElectronTitlebar>
    ```
 
 ## Custom Titlebar Content
 
-`ElectronTitlebar`可自定义除**操作区域**外的内容，默认为空白。
+`sywElectronTitlebar`可自定义除**操作区域**外的内容，默认为空白。
 
 例如：
 
 ```html
-<electronTitlebar>
+<sywElectronTitlebar>
     <div style="width: 100%; height: auto; display: flex; justify-content: center; align-items: center;">
         <span>这是自定义的内容</span>
     </div>
-</electronTitlebar>
+</sywElectronTitlebar>
 ```
 
 注意：由于右侧**操作区域**占据一部分位置的原因，所以自定义的内容在定位上则会**偏左**，可以通过设置`margin-left`来纠正偏移。
 
 ##  Style Operation 
 
-`electronTitlebar` 未设任何可操作属性以控制样式或布局，除操作区域外，均由使用者自行定义，例如操作`titlebar`内部样式，可在`css`文件中使用样式穿透：
+`sywElectronTitlebar` 未设任何可操作属性以控制样式或布局，除操作区域外，均由使用者自行定义，例如操作`titlebar`内部样式，可在`css`文件中使用样式穿透：
 
 ```
 # HTML
-<electronTitlebar class="electron-titlebar"></electronTitlebar>
+<sywElectronTitlebar class="syw-electron-titlebar"></sywElectronTitlebar>
 
 # 改变titlebar背景色
-::ng-deep .electron-titlebar {
-    .electronTitlebarContainer {
+::ng-deep .syw-electron-titlebar {
+    .sywElectronTitlebarContainer {
         background-color: #fff !important;
     }
 }
