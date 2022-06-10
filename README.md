@@ -133,11 +133,13 @@ npm i syw-electron-titlebar
 
 `sywElectronTitlebar` 未设任何可操作属性以控制样式或布局，除操作区域外，均由使用者自行定义，例如操作`titlebar`内部样式，可在`css`文件中使用样式穿透：
 
-```
-# HTML
+```html
+<!-- HTML -->
 <sywElectronTitlebar class="syw-electron-titlebar"></sywElectronTitlebar>
 
-# 改变titlebar背景色
+```
+```scss
+// 改变titlebar背景色
 ::ng-deep .syw-electron-titlebar {
     .sywElectronTitlebarContainer {
         background-color: #fff;
