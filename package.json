@@ -5,7 +5,9 @@
   "keywords": [
     "Angular",
     "Electron",
-    "Titlebar"
+    "Titlebar",
+    "syw",
+    "syw-electron-titlebar"
   ],
   "repository": {
     "type": "git",
@@ -15,8 +17,7 @@
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0",
-    "electron": "^13.1.7",
-    "@electron/remote": "^1.2.0"
+    "electron": "^16.2.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
