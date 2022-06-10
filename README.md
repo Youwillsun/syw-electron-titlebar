@@ -1,5 +1,3 @@
-[toc]
-
 # SywElectronTitlebar
 
 - Angular-CLI v12.2.0
