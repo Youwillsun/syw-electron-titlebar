@@ -5,14 +5,25 @@
 
 ## Release Notes
 
-由于`Electron`中`remote`模块存在许多问题且`remote`模块在`Electron14`之后已经废弃，所以`syw-electron-titlebar v3.0.0`版本选择放弃使用`@electron/remote`模块，改为使用传统的`Electron`通信方式，以取得最大的兼容性和最优的性能。
+`syw-electron-titlebar v3.0.1`版本增加`window resize`监听事件。
 
-- `v3.0.0`版本做出的改变可将最大程序的操作权限交给使用者。
+- 解决当窗口因为拖动而改变时，窗口顶部操作栏按钮显示错误的bug。
 
-- `v3.0.0`版本的更新不兼容`v2.0.0`版本，升级时请注意。
-- `v3.0.0`使用改变，详见文档 **Usage** 一节。
+具体可见文档 **Usage > 2** 一节。
 
-推荐使用`syw-electron-titlebar v3.0.0` 版本。
+> 注：使用者可不更新`syw-electron-titlebar`至 v3.0.1，直接按照 Usage 一节使用即可，但要保证包的版本为 v3。
+
+
+## Introduce
+
+由于`Electron`中`remote`模块存在许多问题且`remote`模块在`Electron14`之后已经废弃，所以`syw-electron-titlebar v3`版本选择放弃使用`@electron/remote`模块，改为使用传统的`Electron`通信方式，以取得最大的兼容性和最优的性能。
+
+- `v3`版本做出的改变可将最大程序的操作权限交给使用者。
+
+- `v3`版本的更新不兼容`v2`版本，升级时请注意。
+- `v3`使用改变，详见文档 **Usage** 一节。
+
+推荐使用`syw-electron-titlebar v3` 版本。
 
 ## Installation
 
@@ -85,7 +96,13 @@ npm i syw-electron-titlebar
    // 监听窗口最小化事件
    ipcMain.on('windowMinimize', () => {
        win.minimize();
-   });            
+   });
+
+    // 监听窗口大小改变
+    win.on('resized', () => {
+      const size = win.getSize();
+      win.webContents.send('windowResized', size);
+    });          
    ```
 
    - 若在`BrowserWindow`配置中设置最小宽高，则 向下还原 时，在未有窗口前置状态情况下，将默认使用此宽高作为最小化时的宽高。
